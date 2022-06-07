@@ -160,6 +160,12 @@
   .testimonial-grid {
     display: grid;
     gap: 1.5rem;
+    grid-template-areas: 
+      'one'
+      'two'
+      'three'
+      'four'
+      'five';
     
     padding-block: 2rem;
     width: min(95%, 70rem);
@@ -175,20 +181,11 @@
 
   @media (min-width: 50em) {
 
-    .testimonial-grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-
-    .testimonial:last-child {
-      grid-column-start: 4;
-      grid-row: 1 / span 2;    
-    }
-
-  /** it doesn't matter where the grid is it will expand to two columns */
-  /** A very generic way to expand column */
-  .grid-col-span-2 {
-    grid-column: span 2;
-  }
+   .testimonial-grid {
+     grid-template-areas: 
+      'one one two five'
+      'three four four five';
+   }
 
   }
   
